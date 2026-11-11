@@ -1,0 +1,7 @@
+<?php
+// CONTOH saja. Ganti dengan index.php proyek Anda.
+require __DIR__ . '/config/db.php';
+session_start();
+
+$versi = $pdo->query('SELECT VERSION() AS v')->fetch();
+echo 'Terhubung ke database: ' . htmlspecialchars($versi['v']);
